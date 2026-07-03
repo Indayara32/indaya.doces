@@ -1,0 +1,224 @@
+/* === CORES DA MARCA INDAYA === */
+:root {
+    --rosa: #ffb3d9;
+    --rosa-forte: #ff4d94;
+    --azul-bebe:#aee7ff;
+    --dourado: #f7d28a;
+    --marrom: #5a3e31;
+    --fundo: #fff8f2;
+    --branco: #ffffff;
+    --cinza: #f1f1f1;
+    
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(135deg, var(--rosa) 0%, var(--azul-bebe) 100%) , url('logo-marca.png');
+    background-size:cover, 400px ;
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--marrom);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* === LOGO === */
+  .logo {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .logo-img {
+    width: 180px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%; /* Deixa a logo redonda bonita */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  .logo h1 {
+    font-size: 2.5rem;
+    color: var(--rosa-forte);
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  
+  .logo p {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    color: var(--marrom);
+    font-weight: 600;
+  }
+  
+  /* === GRID LOJA + CARRINHO === */
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+  }
+  
+  /* === CARDS DOS PRODUTOS === */
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .produto {
+    background: var(--branco);
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .produto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .produto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Corta a foto sem esticar */
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .produto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    color: var(--marrom);
+  }
+  
+  .produto p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .preco {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--rosa-forte);
+    margin-bottom: 12px;
+  }
+  
+  .btn-add {
+    background: var(--rosa-forte);
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.2s;
+  }
+  
+  .btn-add:hover {
+    background: #e04387;
+  }
+  
+  /* === CARRINHO === */
+  .carrinho {
+    background: var(--branco);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+  }
+  
+  .carrinho h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--cinza);
+    padding-bottom: 10px;
+  }
+  
+  .vazio {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+  }
+  
+  .total {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: right;
+    border-top: 2px solid var(--cinza);
+    padding-top: 15px;
+  }
+  
+  .btn-whatsapp {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .btn-whatsapp:hover {
+    background: #1ebe5b;
+  }
+  
+  /* === DIFERENCIAIS === */
+  .diferenciais {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .diferencial {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--branco);
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .diferencial svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--rosa-forte);
+  }
+  
+  /* === RESPONSIVO CELULAR === */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .carrinho {
+      position: relative;
+      top: 0;
+      margin-top: 30px;
+    }
+  
+    .logo h1 {
+      font-size: 2rem;
+    }
+  }
